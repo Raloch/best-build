@@ -5,7 +5,7 @@ export default async function start() {
   const server = await createServer({
     // 任何合法的用户配置选项，加上 `mode` 和 `configFile`
     configFile: false,
-    root: path.resolve(process.cwd(), './project'),
+    root: path.resolve(process.cwd(), '.'),
     server: {
       port: 8000,
     },
