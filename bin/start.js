@@ -1,11 +1,10 @@
-import path from 'path'
-import { createServer } from 'vite'
+const { createServer } = require('vite')
 
-export default async function start() {
+async function start() {
   const server = await createServer({
     // 任何合法的用户配置选项，加上 `mode` 和 `configFile`
     configFile: false,
-    root: path.resolve(process.cwd(), '.'),
+    root: process.cwd(),
     server: {
       port: 8000,
     },
@@ -15,3 +14,5 @@ export default async function start() {
   server.printUrls()
   server.bindCLIShortcuts({ print: true })
 }
+
+module.exports = start

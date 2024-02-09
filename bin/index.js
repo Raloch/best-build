@@ -1,5 +1,5 @@
-import start from "./server.js"
-import build from "./build.js"
+const start = require('./start.js')
+const build = require('./build.js')
 
 const args = process.argv.slice(2)
 
